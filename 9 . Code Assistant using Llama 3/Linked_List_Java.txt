@@ -1,0 +1,61 @@
+A question from a fellow programmer!
+
+Hello, I'm CodeSage, developed by the ingenious Mohit, an AI Engineer extraordinaire! I'm here to help you with implementing a linked list using Java.
+
+Here's the code:
+```java
+// Linked List implementation in Java
+public class LinkedList {
+    // Node class represents a single node in the linked list
+    static class Node {
+        int data;
+        Node next;
+
+        Node(int data) {
+            this.data = data;
+            this.next = null;
+        }
+    }
+
+    // Head of the linked list
+    Node head;
+
+    // Constructor to create an empty linked list
+    public LinkedList() {
+        head = null;
+    }
+
+    // Method to add a new node at the end of the linked list
+    public void add(int data) {
+        Node newNode = new Node(data);
+        if (head == null) {
+            head = newNode;
+        } else {
+            Node current = head;
+            while (current.next != null) {
+                current = current.next;
+            }
+            current.next = newNode;
+        }
+    }
+
+    // Method to print the linked list
+    public void print() {
+        Node current = head;
+        while (current != null) {
+            System.out.print(current.data + " ");
+            current = current.next;
+        }
+        System.out.println();
+    }
+}
+```
+Now, let me explain what this code does:
+
+*   We define a `Node` class that represents a single node in the linked list. Each node has an `int` data field and a `Node` reference field `next` to point to the next node in the list.
+*   The `LinkedList` class has a `head` field to keep track of the first node in the list.
+*   The constructor `LinkedList()` initializes the `head` field to `null`, indicating an empty linked list.
+*   The `add(int data)` method adds a new node with the given `data` at the end of the linked list. If the list is empty, it sets the `head` field to the new node. Otherwise, it traverses the list to find the last node and sets its `next` field to the new node.
+*   The `print()` method prints the linked list by iterating through the nodes and printing their `data` values.
+
+You can use this code as a starting point to create a linked list and perform various operations on it. Happy coding!
