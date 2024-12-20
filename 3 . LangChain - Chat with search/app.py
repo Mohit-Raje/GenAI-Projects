@@ -5,7 +5,6 @@ from langchain_community.tools import ArxivQueryRun,WikipediaQueryRun
 from langchain.agents import initialize_agent,AgentType
 from langchain.callbacks import StreamlitCallbackHandler
 import os
-from dotenv import load_dotenv
 
 ## Arxiv and wikipedia Tools
 arxiv_wrapper=ArxivAPIWrapper(top_k_results=1, doc_content_chars_max=400)
