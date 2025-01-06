@@ -3,3 +3,6 @@ langgraph
 langchain_community
 langchain
 langchain_groq
+
+**Note : Setup all the Keys in colab secret keys**
+Get the langchain/langsmith API Key and Groq API Key from the respective sites.
